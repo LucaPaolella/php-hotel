@@ -77,6 +77,13 @@ $hotels = array(
     ),
 );
 
+$show_only_parking = isset($_GET['parking']) && $_GET['parking'] == 1;
+
+if ($show_only_parking) {
+    $hotels = array_filter($hotels, function ($hotel) {
+        return $hotel['parking'];
+    });
+}
 
 ?>
 
@@ -120,6 +127,16 @@ $hotels = array(
             </tbody>
         </table>
     </div>
+
+    <form class="mb-3" method="get">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="1" id="parking" name="parking">
+            <label class="form-check-label" for="parking">
+                Mostra solo gli hotel col parcheggio
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Mostra</button>
+    </form>
 </body>
 
 </html>
