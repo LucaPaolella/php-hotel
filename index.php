@@ -77,13 +77,7 @@ $hotels = array(
     ),
 );
 
-/*foreach ($hotels as $hotel) {
-    echo '<h2>' . $hotel['name'] . '</h2>';
-    echo '<p>' . $hotel['description'] . '</p>';
-    echo '<p>Location: ' . $hotel['parking'] . '</p>';
-    echo '<p>Rating: ' . $hotel['vote'] . '</p>';
-    echo '<p>Price: $' . $hotel['distance_to_center'] . '</p>';
-}*/
+
 ?>
 
 
